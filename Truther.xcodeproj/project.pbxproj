@@ -48,6 +48,7 @@
 		097824ED1F87E21400064ADB = {
 			isa = PBXGroup;
 			children = (
+				0915F8131F8907DB00D96279 /* README.md */,
 				097824F81F87E21400064ADB /* Truther */,
 				097824F71F87E21400064ADB /* Products */,
 			);
@@ -66,7 +67,6 @@
 			children = (
 				097824F91F87E21400064ADB /* main.swift */,
 				097825001F87E23000064ADB /* Truther.swift */,
-				0915F8131F8907DB00D96279 /* README.md */,
 				091685E21F8834C800CC8645 /* Formatter.swift */,
 				097825021F87E48500064ADB /* Operator.swift */,
 			);
