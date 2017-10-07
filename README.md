@@ -2,6 +2,7 @@
 
 Makes a truth table for the given boolean function
 
+*All operators have equal precedence and are right-associative*
 
 ## Usage
 
