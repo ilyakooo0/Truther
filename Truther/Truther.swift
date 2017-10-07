@@ -45,6 +45,12 @@ struct Formula {
                 return startingLeft
             }
             var ns = s.trimmingCharacters(in: .whitespaces)
+            if ns == "0" {
+                return .constant(false)
+            }
+            if ns == "1" {
+                return .constant(true)
+            }
             if ns.trimmingCharacters(in: .whitespaces).reduce(true, {$0 && CharacterSet.letters.contains($1.unicodeScalars.first!)}) {
                 vars.insert(String(s))
                 return .variable(String(s))
@@ -58,6 +64,16 @@ struct Formula {
                     if CharacterSet.whitespaces.contains((ns.first?.unicodeScalars.first)!) {
                         print("Internal error: weird variable name first charecter \(ns.first!)")
                         exit(1)
+                    }
+                    switch ns.first! {
+                    case "0":
+                        ns = ns.dropFirst().trimmingCharacters(in: .whitespaces)
+                        return "0"
+                    case "1":
+                        ns = ns.dropFirst().trimmingCharacters(in: .whitespaces)
+                        return "1"
+                    default:
+                        break
                     }
                     var i = ns.startIndex
                     while i < ns.endIndex {
@@ -123,6 +139,7 @@ private func extractBrackets(from s: String) -> (wasInside: Substring, after: Su
 private typealias Variable = String
 private indirect enum FormulaElement {
     case variable(Variable)
+    case constant(Bool)
     case operation(FormulaElement, Operator, FormulaElement)
     func evaluate(with variables: [Variable: Bool]) -> Bool {
         switch self {
@@ -135,6 +152,8 @@ private indirect enum FormulaElement {
             }
         case .operation(let l, let op, let r):
             return op.value(l.evaluate(with: variables), r.evaluate(with: variables))
+        case .constant(let b):
+            return b
         }
     }
 }
