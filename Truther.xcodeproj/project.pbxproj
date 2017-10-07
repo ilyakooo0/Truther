@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091685E31F8834C800CC8645 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091685E21F8834C800CC8645 /* Formatter.swift */; };
 		097824FA1F87E21400064ADB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097824F91F87E21400064ADB /* main.swift */; };
+		097825011F87E23000064ADB /* Truther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097825001F87E23000064ADB /* Truther.swift */; };
+		097825031F87E48500064ADB /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097825021F87E48500064ADB /* Operator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0915F8131F8907DB00D96279 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		091685E21F8834C800CC8645 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		097824F61F87E21400064ADB /* Truther */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Truther; sourceTree = BUILT_PRODUCTS_DIR; };
 		097824F91F87E21400064ADB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		097825001F87E23000064ADB /* Truther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truther.swift; sourceTree = "<group>"; };
+		097825021F87E48500064ADB /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				097824F91F87E21400064ADB /* main.swift */,
+				097825001F87E23000064ADB /* Truther.swift */,
+				0915F8131F8907DB00D96279 /* README.md */,
+				091685E21F8834C800CC8645 /* Formatter.swift */,
+				097825021F87E48500064ADB /* Operator.swift */,
 			);
 			path = Truther;
 			sourceTree = "<group>";
@@ -120,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097825011F87E23000064ADB /* Truther.swift in Sources */,
+				097825031F87E48500064ADB /* Operator.swift in Sources */,
+				091685E31F8834C800CC8645 /* Formatter.swift in Sources */,
 				097824FA1F87E21400064ADB /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
