@@ -44,7 +44,7 @@ enum Operator {
         case .f7:
             return {$0 || $1}
         case .f8:
-            return {!($0 && $1)}
+            return {!($0 || $1)}
         case .f9:
             return {$0 == $1}
         case .f10:
